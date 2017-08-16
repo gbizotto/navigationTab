@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  AppRegistry,
-  Text,
-  View,
-  Button,
-  StyleSheet,
-  Image
-} from 'react-native';
-import { StackNavigator, TabNavigator, TabBarBottom  } from 'react-navigation';
+import { AppRegistry } from 'react-native';
+import { TabNavigator, TabBarBottom  } from 'react-navigation';
 import MyHomeScreen from './components/MyHomeScreen';
 import Search from './components/Search';
 import Orders from './components/Orders';
@@ -39,7 +32,7 @@ import Profile from './components/Profile';
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',
     swipeEnabled: false,
-    animationEnabled: false,
+    animationEnabled: true,
    
     
     

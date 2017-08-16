@@ -10,10 +10,10 @@ import {
 
 export default class MyNotificationsScreen extends React.Component {
     static navigationOptions = {
-      tabBarLabel: 'Notifications',
+      tabBarLabel: 'Busca',
       tabBarIcon: ({ tintColor }) => (
         <Image
-          source={require('../assets/ic_done.png')}
+          source={require('../assets/search.png')}
           style={[styles.icon, {tintColor: tintColor}]}
         />
       ),
@@ -21,10 +21,14 @@ export default class MyNotificationsScreen extends React.Component {
   
     render() {
       return (
-        <Button
-          onPress={() => this.props.navigation.goBack()}
-          title="Go back home"
-        />
+          <View>
+              <Text>Press button to go back to home screen</Text>
+            <Button
+                onPress={() => this.props.navigation.goBack()}
+                title="Go back home"
+                style={styles.buttonStyle}
+            />
+        </View>
       );
     }
   }
@@ -34,4 +38,9 @@ export default class MyNotificationsScreen extends React.Component {
       width: 26,
       height: 26,
     },
+    buttonStyle: {
+        alignSelf: 'center',
+        marginRight: 10,
+        marginLeft: 10
+    }
   });

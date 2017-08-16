@@ -10,11 +10,11 @@ import {
 
 export default class MyHomeScreen extends React.Component {
     static navigationOptions = {
-      tabBarLabel: 'Home',
+      tabBarLabel: 'Início',
       // Note: By default the icon is only shown on iOS. Search the showIcon option below.
       tabBarIcon: ({ tintColor }) => (
         <Image
-          source={require('../assets/ic_twiter.png')}
+          source={require('../assets/homeSelected.png')}
           style={[styles.icon, {tintColor: tintColor}]}
         />
       ),
@@ -22,10 +22,14 @@ export default class MyHomeScreen extends React.Component {
   
     render() {
       return (
-        <Button
-          onPress={() => this.props.navigation.navigate('Notifications')}
-          title="Go to notifications"
-        />
+        <View>
+            <Text>Press button to go back to Notifications</Text>
+            <Button
+            onPress={() => this.props.navigation.navigate('Notifications')}
+                title="Go to notifications"
+                style={styles.buttonStyle}
+            />
+        </View>
       );
     }
   }
@@ -35,4 +39,9 @@ export default class MyHomeScreen extends React.Component {
       width: 26,
       height: 26,
     },
+    buttonStyle: {
+        alignSelf: 'center',
+        marginRight: 10,
+        marginLeft: 10
+    }
   });

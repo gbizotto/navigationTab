@@ -22,8 +22,12 @@ import MyNotificationsScreen from './components/MyNotificationsScreen';
     },
   }, {
     tabBarOptions: {
-      activeTintColor: '#e91e63',
-      showIcon: true
+      activeTintColor: 'rgb(255, 255, 255)',
+      inactiveTintColor: 'rgba(255, 255, 255, 0.5)',
+      showIcon: true,
+      style: {
+        backgroundColor: 'rgb(65, 62, 60)',
+      },
     },
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',

@@ -23,10 +23,20 @@ export default class MyHomeScreen extends React.Component {
     render() {
       return (
         <View>
-            <Text>Press button to go back to Notifications</Text>
+            <Text>Press button to go wherever you want!!</Text>
             <Button
-            onPress={() => this.props.navigation.navigate('Notifications')}
-                title="Go to notifications"
+                onPress={() => this.props.navigation.navigate('Search')}
+                title="Go to Search"
+                style={styles.buttonStyle}
+            />
+            <Button
+                onPress={() => this.props.navigation.navigate('Orders')}
+                title="Go to my orders"
+                style={styles.buttonStyle}
+            />
+            <Button
+                onPress={() => this.props.navigation.navigate('Profile')}
+                title="Go to Profile"
                 style={styles.buttonStyle}
             />
         </View>
@@ -38,10 +48,13 @@ export default class MyHomeScreen extends React.Component {
     icon: {
       width: 26,
       height: 26,
+      
     },
     buttonStyle: {
         alignSelf: 'center',
         marginRight: 10,
-        marginLeft: 10
+        marginLeft: 10,
+        paddingTop: 10,
+        paddingBottom: 10
     }
   });

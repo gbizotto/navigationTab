@@ -54,6 +54,8 @@ export default class MyHomeScreen extends React.Component {
         alignSelf: 'center',
         marginRight: 10,
         marginLeft: 10,
+        marginTop: 50,
+        marginBottom: 50,
         paddingTop: 10,
         paddingBottom: 10
     }
